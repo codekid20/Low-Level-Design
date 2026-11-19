@@ -1,0 +1,42 @@
+"""
+Build a two player Connect four game. Players take turns dropping discs into a 7-column, 6-row board. The first to align four
+of their own discs vertically, horizontally, or diagonally wins the game. If the board fills up without a winner,
+the game ends in a draw.
+"""
+
+1. primary capabilities
+2. error handling
+3. scope boundaries
+
+Requirements:
+
+1. Two players take turns dropping discs into a 7-column, 6-row board.
+2. A disc falls to the lowest available space within the chosen column.
+3. The game ends when:
+    - A player aligns four of their own discs vertically, horizontally, or diagonally.
+    - The board fills up without a winner, resulting in a draw.
+4. Invalid moves should be rejected:
+    - Dropping a disc into a full column
+    - moving out of turn
+    - moving after the game has ended
+
+-> Out of Scope
+- UI Support
+- Concurrent games
+
+--> Entities
+Nouns -> Classes
+Verbs -> interface
+
+Noun - Class
+
+Board - Board
+A cell - Cell
+Disc color - Disc (enum)
+Player - Player
+The game itself - Game
+
+Verb - Interface
+
+decide if the board has a winner - WinningStrategy
+
